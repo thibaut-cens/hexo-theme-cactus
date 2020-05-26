@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>>
+<html<%= config.language ? " lang=" + config.language.substring(0, 2) : ""%>
 <%- partial('_partial/head') %>
-<body class="max-width mx-auto px3 <%- theme.direction -%>">
+<body>
+	<div id="particles-js"></div>
+	<div class="max-width mx-auto px3 <%- theme.direction -%>">
     <% if (is_post()) { %>
       <%- partial('_partial/post/actions_desktop') %>
     <% } %>
@@ -17,5 +19,6 @@
     </div>
     <%- partial('_partial/styles') %>
     <%- partial('_partial/scripts') %>
+	</div>
 </body>
 </html>
